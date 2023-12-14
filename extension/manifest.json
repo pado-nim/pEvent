@@ -1,0 +1,32 @@
+{
+    "name": "pEvent",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.margonem.pl/*"
+            ],
+            "js": [
+                "inject.js"
+            ],
+            "all_frames": true,
+            "run_at":"document_idle"
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+        "content.js"
+    ],
+    "permissions": [
+        "idle",
+        "storage",
+        "management",
+		"debugger",
+		"scripting",
+		"declarativeNetRequest",
+		"storage"
+    ],
+    "manifest_version": 2
+}
